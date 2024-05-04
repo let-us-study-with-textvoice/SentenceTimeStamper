@@ -1,4 +1,4 @@
 # test
-‚±‚ê‚Í—ûK‚Å‚·B
+ã“ã‚Œã¯ç·´ç¿’ã§ã™ã€‚
 This is Traning
 LF
