@@ -17,7 +17,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using WaveFormRendererLib2;
+using NAudio.WaveFormRenderer;
 
 
 namespace SentenceTimeStamper
@@ -285,8 +285,18 @@ namespace SentenceTimeStamper
             soundCloudDarkSticks.Width = (int)((panel1.Height - 2) * renderingScale); //生成する画像の幅
             soundCloudOrangeSticks.Width = (int)((panel1.Height - 2) * renderingScale); //生成する画像の幅
 
-            Image i1 = renderer.Render(voiceFilePath, averagePeakProvider, soundCloudDarkSticks);
-            Image i2 = renderer.Render(voiceFilePath, averagePeakProvider, soundCloudOrangeSticks);
+            Image i1 = null;
+            Image i2 = null;
+
+            using (var voiceStream = new AudioFileReader(voiceFilePath))
+            {
+                i1 = renderer.Render(voiceStream, averagePeakProvider, soundCloudDarkSticks);
+            }
+
+            using (var voiceStream = new AudioFileReader(voiceFilePath))
+            {
+                i2 = renderer.Render(voiceStream, averagePeakProvider, soundCloudOrangeSticks);
+            }
 
             i1.RotateFlip(RotateFlipType.Rotate90FlipX);
             i2.RotateFlip(RotateFlipType.Rotate90FlipX);

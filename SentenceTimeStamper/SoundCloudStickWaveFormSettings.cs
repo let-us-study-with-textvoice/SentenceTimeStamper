@@ -1,5 +1,5 @@
 ﻿using System.Drawing;
-using WaveFormRendererLib2;
+using NAudio.WaveFormRenderer;
 
 namespace SentenceTimeStamper
 {

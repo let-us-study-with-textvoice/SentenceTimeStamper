@@ -4,12 +4,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentenceTimeStamper", "SentenceTimeStamper\SentenceTimeStamper.csproj", "{4C38EE99-C9F7-4473-A72B-AC0F0E117A0D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64292AE1-F835-483A-BCF7-4A251E915AF6} = {64292AE1-F835-483A-BCF7-4A251E915AF6}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWaveBlock", "TestWaveBlock\TestWaveBlock.csproj", "{1BF59FAA-7ED6-4078-825B-7FC99643D0E4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64292AE1-F835-483A-BCF7-4A251E915AF6} = {64292AE1-F835-483A-BCF7-4A251E915AF6}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{AA583659-4934-4AC2-968A-7EA50896E73D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSentence", "TestSentence\TestSentence.csproj", "{1F923A14-8C60-4B9D-B040-E399CD773F65}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64292AE1-F835-483A-BCF7-4A251E915AF6} = {64292AE1-F835-483A-BCF7-4A251E915AF6}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaveFormRendererLib", "WaveFormRendererLib\WaveFormRendererLib.csproj", "{64292AE1-F835-483A-BCF7-4A251E915AF6}"
 EndProject

@@ -206,5 +206,11 @@
     <None Include="Resources\playBeforeSentence.bmp" />
     <None Include="Resources\playNextSentence.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WaveFormRendererLib\WaveFormRendererLib.csproj">
+      <Project>{64292ae1-f835-483a-bcf7-4a251e915af6}</Project>
+      <Name>WaveFormRendererLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

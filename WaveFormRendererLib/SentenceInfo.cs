@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 
 
-namespace WaveFormRendererLib
+namespace NAudio.WaveFormRenderer
 {
-    public class SentenceInfo:PictureBox
+    public class SentenceInfo   //:PictureBox
     {
         private long samplingPosition;
         private bool onstart;
@@ -16,15 +16,15 @@ namespace WaveFormRendererLib
 
         public SentenceInfo() 
         {
-            Width = ArrowWidth;
-            Height = ArrowHeight;
+            //Width = ArrowWidth;
+            //Height = ArrowHeight;
 
         }
 
         public SentenceInfo(long Position, bool onStart, bool onManual)
         {
-            Width = ArrowWidth;
-            Height = ArrowHeight;
+            //Width = ArrowWidth;
+            //Height = ArrowHeight;
             //Console.WriteLine("ArrowWidth1={0}", Width);
 
             this.samplingPosition = Position;
@@ -38,11 +38,11 @@ namespace WaveFormRendererLib
         {
             if (this.onstart)
             {
-                this.Image = WaveFormRendererLib.Properties.Resources.StartTag;
+                //this.Image = WaveFormRendererLib.Properties.Resources.StartTag;
             }
             else
             {
-                this.Image = WaveFormRendererLib.Properties.Resources.PauseTag;
+                //this.Image = WaveFormRendererLib.Properties.Resources.PauseTag;
             }
 
         }
