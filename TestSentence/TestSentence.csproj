@@ -49,11 +49,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WaveFormRendererLib\WaveFormRendererLib2.csproj">
-      <Project>{3efef2d1-5d08-46fd-af6d-098dbe7fb3b4}</Project>
-      <Name>WaveFormRendererLib2</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
