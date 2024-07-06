@@ -9,16 +9,16 @@ namespace NAudio.WaveFormRenderer
         private long samplingPosition;
         private bool onstart;
         private bool onmanual;
-        private const int ArrowWidth = 44;
-        private const int ArrowHeight = 21;
-        private string sentenceText;
+        //private const int ArrowWidth = 44;
+        //private const int ArrowHeight = 21;
+        //private string sentenceText;
 
 
-        public SentenceInfo() 
-        {
-            //Width = ArrowWidth;
-            //Height = ArrowHeight;
-        }
+        //public SentenceInfo() 
+        //{
+        //    //Width = ArrowWidth;
+        //    //Height = ArrowHeight;
+        //}
 
         public SentenceInfo(long Position, bool onStart, bool onManual)
         {
@@ -45,6 +45,7 @@ namespace NAudio.WaveFormRenderer
         //}
 
         public long SamplingPosition { get { return samplingPosition; }  set { samplingPosition = value; } }
+
         public bool OnStart 
         { 
             get 
