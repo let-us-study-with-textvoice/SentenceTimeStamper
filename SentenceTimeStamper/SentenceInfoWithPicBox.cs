@@ -14,6 +14,11 @@ namespace SentenceTimeStamper
         private const int ArrowHeight = 21;
         private string sentenceText;
 
+        public SentenceInfoWithPicBox()
+        {
+            Width = ArrowWidth;
+            Height = ArrowHeight;
+        }
 
         public SentenceInfoWithPicBox(SentenceInfo sentInfo) 
         {
