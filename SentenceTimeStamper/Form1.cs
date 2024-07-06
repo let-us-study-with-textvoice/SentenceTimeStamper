@@ -622,8 +622,16 @@ namespace SentenceTimeStamper
                 timeRise = int.Parse(rizeTimeTextBox.Text);
                 timeFall = int.Parse(fallTimeTextBox.Text);
 
-                //listArrow = waveFormArrangement.FindSectence((float)trackBar1.Value / (trackBar1.Maximum - trackBar1.Minimum) / magnification, timeRise, timeFall);
-                listArrow.AddRange(waveFormArrangement.FindSectence((float)trackBar1.Value / (trackBar1.Maximum - trackBar1.Minimum) / magnification, timeRise, timeFall));
+
+                // 音声波形からセンテンスを区切ったリストを生成し、（　waveFormArrangement.FindSectence()　）
+                // SentenceInfoのリストからSentenceInfoWithPicBoxのリストlistArrowに追加
+                foreach ( SentenceInfo sentInfo in waveFormArrangement.FindSectence((float)trackBar1.Value / (trackBar1.Maximum - trackBar1.Minimum) / magnification, timeRise, timeFall))
+                {
+                    // SentenceInfoWithPicBoxのリストをlistArrowに加える
+                    listArrow.Add(new SentenceInfoWithPicBox(sentInfo));
+                }
+
+                //listArrow.AddRange(waveFormArrangement.FindSectence((float)trackBar1.Value / (trackBar1.Maximum - trackBar1.Minimum) / magnification, timeRise, timeFall));
 
                 MakeArrow();    // 矢印を作って、panel2に登録する
                 CalculateArrowPosition();
