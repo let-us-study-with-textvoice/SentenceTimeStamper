@@ -29,22 +29,21 @@ namespace NAudio.WaveFormRenderer
             this.samplingPosition = Position;
             this.onstart = onStart;
             this.onmanual = onManual;
-
-            changImage();
+            //changImage();
         }
 
-        private void changImage()
-        {
-            if (this.onstart)
-            {
-                //this.Image = WaveFormRendererLib.Properties.Resources.StartTag;
-            }
-            else
-            {
-                //this.Image = WaveFormRendererLib.Properties.Resources.PauseTag;
-            }
+        //private void changImage()
+        //{
+        //    if (this.onstart)
+        //    {
+        //        //this.Image = WaveFormRendererLib.Properties.Resources.StartTag;
+        //    }
+        //    else
+        //    {
+        //        //this.Image = WaveFormRendererLib.Properties.Resources.PauseTag;
+        //    }
+        //}
 
-        }
         public long SamplingPosition { get { return samplingPosition; }  set { samplingPosition = value; } }
         public bool OnStart 
         { 
@@ -55,14 +54,14 @@ namespace NAudio.WaveFormRenderer
             set 
             {
                 onstart = value;
-                changImage();
+                //changImage();
             } 
         }
 
 
         public bool OnManual { get { return onmanual; }  set { onmanual = value; } }
 
-        public string SentenceText { get { return sentenceText; } set { sentenceText = value; } }
+        //public string SentenceText { get { return sentenceText; } set { sentenceText = value; } }
 
     }
 }

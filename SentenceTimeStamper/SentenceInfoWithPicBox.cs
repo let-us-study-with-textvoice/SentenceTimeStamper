@@ -17,33 +17,38 @@ namespace SentenceTimeStamper
 
         public SentenceInfoWithPicBox(SentenceInfo sentInfo) 
         {
-            Width = sentInfo.ArrowWidth;
-            Height = sentInfo.ArrowHeight;
+            Width = ArrowWidth;
+            Height = ArrowHeight;
 
+            this.samplingPosition = sentInfo.SamplingPosition;
+            this.onstart = sentInfo.OnStart;
+            this.onmanual = sentInfo.OnManual;
+
+            changeImage();
         }
 
         public SentenceInfoWithPicBox(long Position, bool onStart, bool onManual)
         {
-            //Width = ArrowWidth;
-            //Height = ArrowHeight;
+            Width = ArrowWidth;
+            Height = ArrowHeight;
             //Console.WriteLine("ArrowWidth1={0}", Width);
 
             this.samplingPosition = Position;
             this.onstart = onStart;
             this.onmanual = onManual;
 
-            changImage();
+            changeImage();
         }
 
-        private void changImage()
+        private void changeImage()
         {
             if (this.onstart)
             {
-                //this.Image = WaveFormRendererLib.Properties.Resources.StartTag;
+                this.Image = Properties.Resources.StartTag;
             }
             else
             {
-                //this.Image = WaveFormRendererLib.Properties.Resources.PauseTag;
+                this.Image = Properties.Resources.PauseTag;
             }
 
         }
@@ -57,7 +62,7 @@ namespace SentenceTimeStamper
             set 
             {
                 onstart = value;
-                changImage();
+                changeImage();
             } 
         }
 

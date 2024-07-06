@@ -186,6 +186,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\StartTag.bmp" />
+    <None Include="Resources\PauseTag.bmp" />
     <None Include="Resources\expsion16_161.png" />
     <None Include="Resources\down16_161.png" />
     <None Include="Resources\FindSentence.png" />
