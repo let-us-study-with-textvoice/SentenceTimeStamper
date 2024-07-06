@@ -613,7 +613,11 @@ namespace SentenceTimeStamper
 
             if (audioFile != null)
             {
-                waveFormArrangement.ArrangeWF(voiceFilePath);
+                using (var wavestream = new AudioFileReader(voiceFilePath))
+                {
+                    waveFormArrangement.ArrangeWF(wavestream);
+                }
+                
 
                 timeRise = int.Parse(rizeTimeTextBox.Text);
                 timeFall = int.Parse(fallTimeTextBox.Text);
