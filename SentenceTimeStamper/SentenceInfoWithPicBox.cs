@@ -1,10 +1,11 @@
 ﻿using System;
-//using System.Windows.Forms;
+using System.Windows.Forms;
+using NAudio.WaveFormRenderer;
 
 
-namespace NAudio.WaveFormRenderer
+namespace SentenceTimeStamper
 {
-    public class SentenceInfo //:PictureBox
+    public class SentenceInfoWithPicBox:PictureBox
     {
         private long samplingPosition;
         private bool onstart;
@@ -14,13 +15,14 @@ namespace NAudio.WaveFormRenderer
         private string sentenceText;
 
 
-        public SentenceInfo() 
+        public SentenceInfoWithPicBox(SentenceInfo sentInfo) 
         {
-            //Width = ArrowWidth;
-            //Height = ArrowHeight;
+            Width = sentInfo.ArrowWidth;
+            Height = sentInfo.ArrowHeight;
+
         }
 
-        public SentenceInfo(long Position, bool onStart, bool onManual)
+        public SentenceInfoWithPicBox(long Position, bool onStart, bool onManual)
         {
             //Width = ArrowWidth;
             //Height = ArrowHeight;
