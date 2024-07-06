@@ -29,7 +29,7 @@ namespace SentenceTimeStamper
             this.onstart = sentInfo.OnStart;
             this.onmanual = sentInfo.OnManual;
 
-            changeImage();
+            ChangeImage();
         }
 
         public SentenceInfoWithPicBox(long Position, bool onStart, bool onManual)
@@ -42,10 +42,10 @@ namespace SentenceTimeStamper
             this.onstart = onStart;
             this.onmanual = onManual;
 
-            changeImage();
+            ChangeImage();
         }
 
-        private void changeImage()
+        private void ChangeImage()
         {
             if (this.onstart)
             {
@@ -67,7 +67,7 @@ namespace SentenceTimeStamper
             set 
             {
                 onstart = value;
-                changeImage();
+                ChangeImage();
             } 
         }
 
