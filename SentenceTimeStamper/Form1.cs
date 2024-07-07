@@ -475,7 +475,7 @@ namespace SentenceTimeStamper
         // このソフトウエアについて
         private void aboutAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sentence Time Stamper 0.05\n" +
+            MessageBox.Show("Sentence Time Stamper 0.06\n" +
                 "\n" +
                 "Special Thanks\n" +
                 "NAudio and NAudio_WaveFormRendererLib\n" +

@@ -1,6 +1,9 @@
 ﻿using System.Drawing;
 using NAudio.WaveFormRenderer;
 
+// このクラスは、 NAudio.WaveFormRenderer名前空間の
+// SoundCloudBlockWaveFormSettingsクラスを変更して作ったものである。
+
 namespace SentenceTimeStamper
 {
     public class SoundCloudStickWaveFormSettings : WaveFormRendererSettings
