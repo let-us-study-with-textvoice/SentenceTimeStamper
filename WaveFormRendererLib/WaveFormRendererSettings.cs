@@ -12,7 +12,7 @@ namespace NAudio.WaveFormRenderer
             BottomHeight = 50;
             PixelsPerPeak = 1;
             SpacerPixels = 0;
-            BackgroundColor = Color.Beige;
+            BackgroundColor = Color.Beige;  // ”gŒ`‚ğ•\¦‚·‚é•”•ª‚Ì”wŒiF
         }
 
         // for display purposes only

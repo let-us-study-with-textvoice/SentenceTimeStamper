@@ -12,7 +12,7 @@ namespace NAudio.WaveFormRenderer
         private int samplePerBlock;             // １Blockあたりのサンプリング数
         private float[] waveValuePerBlock;      // Blockの中のサンプリング値を代表値（peakProviderによって決まる値、平均値(AveragePeakProvider())、最大値(MaxPeakProvider())など）
         private int sampleRate;
-        private int blockAlign;
+        //private int blockAlign;
 
         public float[] ArrangeWF(WaveStream wavestream)
         {
@@ -24,10 +24,11 @@ namespace NAudio.WaveFormRenderer
         {
             sampleRate = (wavestream.WaveFormat.SampleRate);
             samplePerBlock = sampleRate * BLOCKTIMEms / 1000;
-            int bytesPerSample = (wavestream.WaveFormat.BitsPerSample / 8);
+            //int bytesPerSample = (wavestream.WaveFormat.BitsPerSample / 8);
             samples = wavestream.Length / wavestream.WaveFormat.BlockAlign;
             waveValuePerBlock = new float[(samples / samplePerBlock) + 1];
-            blockAlign = wavestream.WaveFormat.BlockAlign;
+            //blockAlign = wavestream.WaveFormat.BlockAlign;
+
             //// デバッグ用
             //Console.WriteLine("BlockAlign=             {0}", wavestream.WaveFormat.BlockAlign);
             //Console.WriteLine("AverageBytesPerSecond = {0}", wavestream.WaveFormat.AverageBytesPerSecond);
@@ -107,7 +108,7 @@ namespace NAudio.WaveFormRenderer
         //    return b;
         //}
 
-        // センテンスの開始終了のポジションを探すメソッド
+        // センテンスの開始と終了のポジションを探すメソッド
         public List<SentenceInfo> FindSectence(float thresholdLevel, int raiseUpHoldTime, int fallDownHoldTime)
         {
             //Console.WriteLine("****\nFindSentence\n******************");
@@ -163,11 +164,12 @@ namespace NAudio.WaveFormRenderer
                 }
             }
 
-            foreach (SentenceInfo x in list)
-            {
-                //Console.WriteLine("Position={0}  OnStart:{1}  OnManual:{2}", x.SamplingPosition, x.OnStart, x.OnManual);
-            }
-            //Console.WriteLine();
+            // デバッグ用
+            //foreach (SentenceInfo x in list)
+            //{
+            //    Console.WriteLine("Position={0}  OnStart:{1}  OnManual:{2}", x.SamplingPosition, x.OnStart, x.OnManual);
+            //}
+            ////Console.WriteLine();
 
             return list;
         }
