@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using NAudio.Wave;
 
-namespace WaveFormRendererLib2
+namespace NAudio.WaveFormRenderer
 {
     public class WaveFormArrangement
     {
@@ -12,36 +12,35 @@ namespace WaveFormRendererLib2
         private int samplePerBlock;             // １Blockあたりのサンプリング数
         private float[] waveValuePerBlock;      // Blockの中のサンプリング値を代表値（peakProviderによって決まる値、平均値(AveragePeakProvider())、最大値(MaxPeakProvider())など）
         private int sampleRate;
-        private int blockAlign;
+        //private int blockAlign;
 
-        public float[] ArrangeWF(string selectedFile)
+        public float[] ArrangeWF(WaveStream wavestream)
         {
             //Console.WriteLine(selectedFile);  // デバッグ用
-            return ArrangeWF(selectedFile, new AveragePeakProvider(3));
+            return ArrangeWF(wavestream, new AveragePeakProvider(3));
         }
 
-        public float[] ArrangeWF(string selectedFile, IPeakProvider peakProvider)
+        public float[] ArrangeWF(WaveStream wavestream, IPeakProvider peakProvider)
         {
-            using (var reader = new AudioFileReader(selectedFile))
-            {
-                sampleRate = (reader.WaveFormat.SampleRate);
-                samplePerBlock = sampleRate * BLOCKTIMEms / 1000;
-                int bytesPerSample = (reader.WaveFormat.BitsPerSample / 8);
-                samples = reader.Length / reader.WaveFormat.BlockAlign;
-                waveValuePerBlock = new float[(samples / samplePerBlock) + 1];
-                blockAlign = reader.WaveFormat.BlockAlign;
-                //// デバッグ用
-                //Console.WriteLine("BlockAlign=             {0}", reader.WaveFormat.BlockAlign);
-                //Console.WriteLine("AverageBytesPerSecond = {0}", reader.WaveFormat.AverageBytesPerSecond);
-                //Console.WriteLine("SampleRate              {0}", reader.WaveFormat.SampleRate);
-                //Console.WriteLine("Channels                {0}", reader.WaveFormat.Channels);
-                //Console.WriteLine("ExtraSize               {0}", reader.WaveFormat.ExtraSize);
-                //Console.WriteLine("BitsPerSample           {0}", reader.WaveFormat.BitsPerSample);
-                //Console.WriteLine("Length                  {0}", reader.Length);
+            sampleRate = (wavestream.WaveFormat.SampleRate);
+            samplePerBlock = sampleRate * BLOCKTIMEms / 1000;
+            //int bytesPerSample = (wavestream.WaveFormat.BitsPerSample / 8);
+            samples = wavestream.Length / wavestream.WaveFormat.BlockAlign;
+            waveValuePerBlock = new float[(samples / samplePerBlock) + 1];
+            //blockAlign = wavestream.WaveFormat.BlockAlign;
 
-                peakProvider.Init(reader, samplePerBlock * reader.WaveFormat.Channels);
-                return ArrangeWF(peakProvider);
-            }
+            //// デバッグ用
+            //Console.WriteLine("BlockAlign=             {0}", wavestream.WaveFormat.BlockAlign);
+            //Console.WriteLine("AverageBytesPerSecond = {0}", wavestream.WaveFormat.AverageBytesPerSecond);
+            //Console.WriteLine("SampleRate              {0}", wavestream.WaveFormat.SampleRate);
+            //Console.WriteLine("Channels                {0}", wavestream.WaveFormat.Channels);
+            //Console.WriteLine("ExtraSize               {0}", wavestream.WaveFormat.ExtraSize);
+            //Console.WriteLine("BitsPerSample           {0}", wavestream.WaveFormat.BitsPerSample);
+            //Console.WriteLine("Length                  {0}", wavestream.Length);
+
+            peakProvider.Init(wavestream.ToSampleProvider(), samplePerBlock * wavestream.WaveFormat.Channels);
+            return ArrangeWF(peakProvider);
+
         }
 
         private float[] ArrangeWF(IPeakProvider peakProvider)
@@ -61,55 +60,55 @@ namespace WaveFormRendererLib2
             return waveValuePerBlock;
         }
 
-        // 波形を描画する
-        public Image Render(int width, int height, double wScale)
-        {
-            // width:　要求側の基本的なビットマップの幅
-            // height: 要求側の基本的なビットマップの高さ
-            // hScale:　ｗ方向の拡大倍率
+        //// 波形を描画する
+        //public Image Render(int width, int height, double wScale)
+        //{
+        //    // width:　要求側の基本的なビットマップの幅
+        //    // height: 要求側の基本的なビットマップの高さ
+        //    // hScale:　ｗ方向の拡大倍率
 
-            Bitmap b = new Bitmap((int)(width * wScale), height);
-            float sum, ave, curr;
+        //    Bitmap b = new Bitmap((int)(width * wScale), height);
+        //    float sum, ave, curr;
 
 
-            using (Graphics g = Graphics.FromImage(b))
-            {
-                g.FillRectangle(new SolidBrush(Color.Yellow), 0, 0, b.Width, b.Height);
+        //    using (Graphics g = Graphics.FromImage(b))
+        //    {
+        //        g.FillRectangle(new SolidBrush(Color.Yellow), 0, 0, b.Width, b.Height);
 
-                long j = (waveValuePerBlock.Length / b.Width) + 1; //ひとつのピクセルに入れるデータの数
-                long j_;
+        //        long j = (waveValuePerBlock.Length / b.Width) + 1; //ひとつのピクセルに入れるデータの数
+        //        long j_;
 
-                for (int x = 0; x < b.Width; x++)
-                {
-                    j_ = j;
-                    sum = 0.0f;
-                    curr = 0.0f;
-                    for (long k = 0; k < j; k++)
-                    {
-                        if (x * j + k < waveValuePerBlock.Length)
-                        {
-                            //if (curr < waveValuePerBlock[x*j+k])
-                            //    curr = waveValuePerBlock[x*j+k];
-                            sum = sum + waveValuePerBlock[x * j + k];
-                            //Console.WriteLine("k={0}   curr={1}  ", k, curr);
-                        }
-                        else
-                        {
-                            j_ = k - 1;
-                            break;
-                        }
-                    }
-                    ave = sum / j_;
-                    //Console.WriteLine("i={0}  curr={1}  wfa[]={2}", x, curr, waveValuePerBlock.Length);
+        //        for (int x = 0; x < b.Width; x++)
+        //        {
+        //            j_ = j;
+        //            sum = 0.0f;
+        //            curr = 0.0f;
+        //            for (long k = 0; k < j; k++)
+        //            {
+        //                if (x * j + k < waveValuePerBlock.Length)
+        //                {
+        //                    //if (curr < waveValuePerBlock[x*j+k])
+        //                    //    curr = waveValuePerBlock[x*j+k];
+        //                    sum = sum + waveValuePerBlock[x * j + k];
+        //                    //Console.WriteLine("k={0}   curr={1}  ", k, curr);
+        //                }
+        //                else
+        //                {
+        //                    j_ = k - 1;
+        //                    break;
+        //                }
+        //            }
+        //            ave = sum / j_;
+        //            //Console.WriteLine("i={0}  curr={1}  wfa[]={2}", x, curr, waveValuePerBlock.Length);
 
-                    g.DrawLine(new Pen(Color.Blue, 1.0f), new Point(x, b.Height), new Point(x, (int)(b.Height * (1.0f - ave))));
-                    x++;
-                }
-            }
-            return b;
-        }
+        //            g.DrawLine(new Pen(Color.Blue, 1.0f), new Point(x, b.Height), new Point(x, (int)(b.Height * (1.0f - ave))));
+        //            x++;
+        //        }
+        //    }
+        //    return b;
+        //}
 
-        // センテンスの開始終了のポジションを探すメソッド
+        // センテンスの開始と終了のポジションを探すメソッド
         public List<SentenceInfo> FindSectence(float thresholdLevel, int raiseUpHoldTime, int fallDownHoldTime)
         {
             //Console.WriteLine("****\nFindSentence\n******************");
@@ -162,18 +161,17 @@ namespace WaveFormRendererLib2
                     // listに要素を追加
                     list.Add(new SentenceInfo((i - fallDownHoldBlocks + 1) * BLOCKTIMEms * sampleRate / 1000, false, false));
                     count = 0;
-
                 }
             }
 
-            foreach (SentenceInfo x in list)
-            {
-                //Console.WriteLine("Position={0}  OnStart:{1}  OnManual:{2}", x.SamplingPosition, x.OnStart, x.OnManual);
-            }
-            //Console.WriteLine();
+            // デバッグ用
+            //foreach (SentenceInfo x in list)
+            //{
+            //    Console.WriteLine("Position={0}  OnStart:{1}  OnManual:{2}", x.SamplingPosition, x.OnStart, x.OnManual);
+            //}
+            ////Console.WriteLine();
 
             return list;
-
         }
 
         public int BlockTimems

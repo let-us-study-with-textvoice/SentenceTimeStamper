@@ -1,541 +1,459 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <usedfiles>
-    <voicefilepath>D:\kvh8b\repos_GitHub\SentenceTimeStamper\SampleFiles\京都大学申请iPS细胞临床试验.mp3</voicefilepath>
-    <textfilepath>D:\kvh8b\repos_GitHub\SentenceTimeStamper\SampleFiles\京都大学申请iPS细胞临床试验.txt</textfilepath>
+    <voicefilepath>D:\kvh8b\source_C#\SentenceTimeStamper\SampleFiles\京都大学申请iPS细胞临床试验.mp3</voicefilepath>
+    <textfilepath>D:\kvh8b\source_C#\SentenceTimeStamper\SampleFiles\京都大学申请iPS细胞临床试验.txt</textfilepath>
     <title>　　　　京都大学申请iPS细胞临床试验
 </title>
-    <text>患者血液中的血小板等成分少于正常人，因此容易产生体内出血。迄今为止，医院一般采取输血补充血小板等方式进行治疗，但部分患者的体质容易产生排异反应，因此不适用输血的治疗方法。
-　　以京都大学医学系附属医院教授高折晃史和同一大学iPS细胞研究所教授江藤浩之为首的研究小组认为，如果使用iPS细胞的话有望使容易产生排异反应的患者也能接受输血治疗。据悉，这个研究小组已向政府提交了临床试验申请，如果通过审查，将有一名患者接受试验性临床治疗。
-　　研究小组拟定的试验方案如下：首先利用该患者血液生成iPS细胞，再由iPS细胞生成大量血小板，然后以逐步增量的方式分三次将生成的血小板注入到患者体内。研究小组将在这一过程中确认这一方法的安全性和效果。研究小组表示，由于注入患者体内的血小板源自其自身血液生成的iPS细胞，因此估计几乎不会出现排异反应，这是一项发挥iPS细胞特长的临床研究。
-　　政府有关部门将于近期开始对这一申请进行审议。如果通过审查，研究小组打算在明年3月底之前开始将生成的血小板注入患者体内。
+    <text>
 </text>
   </usedfiles>
   <sentenceinfolist>
     <sentenceinfo>
-      <samplingposition>45423</samplingposition>
+      <samplingposition>44982</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
-      <sentencetext>日本京都大学研究人员的研究表明，</sentencetext>
+      <sentencetext>　　日本京都大学研究人员的研究表明，</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>164934</samplingposition>
+      <samplingposition>165751</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>183897</samplingposition>
+      <samplingposition>183456</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
       <sentencetext>把利用iPS细胞形成的血液成分</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>326340</samplingposition>
+      <samplingposition>325899</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
       <sentencetext />
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>335595</samplingposition>
+      <samplingposition>342216</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
       <sentencetext>注入再生不良性贫血的患者体内后</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>485100</samplingposition>
+      <samplingposition>484218</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>502299</samplingposition>
+      <samplingposition>501858</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
       <sentencetext>有望改善患者的症状。</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>582120</samplingposition>
+      <samplingposition>581238</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>617841</samplingposition>
+      <samplingposition>617400</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
       <sentencetext>据悉，</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>636404</samplingposition>
+      <samplingposition>631953</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>654003</samplingposition>
+      <samplingposition>653562</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
       <sentencetext>京都大学已在日本国内率先就这一研究成果</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>818055</samplingposition>
+      <samplingposition>817614</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>830844</samplingposition>
+      <samplingposition>830403</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
       <sentencetext>向政府提交了临床试验申请，</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>959616</samplingposition>
+      <samplingposition>958734</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
-      <sentencetext />
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>1012095</samplingposition>
+      <samplingposition>1011654</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
       <sentencetext>政府有关部门将于近期开始对申请进行审议。
 </sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>1171737</samplingposition>
+      <samplingposition>1176630</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
+      <sentencetext />
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>1225980</samplingposition>
+      <samplingposition>1224719</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
       <sentencetext>　　再生不良性贫血是一种血液的疑难疾病，</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>1382976</samplingposition>
+      <samplingposition>1382535</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>1416051</samplingposition>
+      <samplingposition>1415610</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
-      <sentencetext />
+      <sentencetext>患者血液中的血小板等成分少于正常人，</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>1569519</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-      <sentencetext />
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>1589805</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-      <sentencetext />
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>1702260</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>1738863</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>1768410</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>1782081</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>1847823</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>1854405</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-      <sentencetext />
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2002320</samplingposition>
+      <samplingposition>1569078</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
       <sentencetext />
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>2028159</samplingposition>
+      <samplingposition>1589364</samplingposition>
       <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>因此容易产生体内出血。</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>1701819</samplingposition>
+      <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>2170602</samplingposition>
+      <samplingposition>1737981</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>迄今为止，</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>1767969</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
       <sentencetext />
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>2188683</samplingposition>
+      <samplingposition>1781640</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
-      <sentencetext />
+      <sentencetext>医院一般采取输血补充血小板等方式进行治疗，</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>2307221</samplingposition>
+      <samplingposition>1996848</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>2359402</samplingposition>
+      <samplingposition>2027277</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
+      <sentencetext>但部分患者的体质容易产生排异反应，</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>2513898</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2525166</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2568384</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2587347</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2632329</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2641149</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2726703</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2743020</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2850183</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2879730</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2969253</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>2987334</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3122721</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3137274</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3210039</samplingposition>
+      <samplingposition>2170161</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
       <sentencetext />
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>3255903</samplingposition>
+      <samplingposition>2188242</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
-      <sentencetext />
+      <sentencetext>因此不适用输血的治疗方法。
+</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>3431421</samplingposition>
+      <samplingposition>2301579</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>3457881</samplingposition>
+      <samplingposition>2386251</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
+      <sentencetext>　　以京都大学医学系附属医院教授高折晃史</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>3516534</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3528882</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3580038</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3589299</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3675735</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3731301</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3828321</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3857868</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3872421</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3880800</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3965913</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>3977820</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>4018833</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>4043529</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>4168332</samplingposition>
+      <samplingposition>2569147</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
       <sentencetext />
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4195233</samplingposition>
+      <samplingposition>2586465</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
-      <sentencetext />
+      <sentencetext>和同一大学iPS细胞研究所教授</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4310334</samplingposition>
+      <samplingposition>2729783</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>true</onmanual>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>2738991</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>true</onmanual>
+      <sentencetext>江藤浩之为首的研究小组认为，</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>2849742</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>false</onmanual>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>2878848</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>如果使用iPS细胞的话</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>2968812</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>false</onmanual>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>2986893</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>有望使容易产生排异反应的患者</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>3122280</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>false</onmanual>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>3136833</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>也能接受输血治疗。</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>3209598</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>false</onmanual>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>3255021</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>据悉，这个研究小组已向政府提交了临床试验申请，</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>3430980</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>false</onmanual>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>3457440</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>如果通过审查，</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>3516093</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
       <sentencetext />
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4323564</samplingposition>
+      <samplingposition>3528441</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
-      <sentencetext />
+      <sentencetext>将有一名患者接受试验性临床治疗。
+</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4430727</samplingposition>
+      <samplingposition>3675294</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>false</onmanual>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>3730860</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>　　研究小组拟定的试验方案如下：</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>3827439</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
       <sentencetext />
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4441311</samplingposition>
+      <samplingposition>3856986</samplingposition>
       <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>首先利用该患者血液生成iPS细胞，</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>4018392</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>false</onmanual>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>4043088</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>再由iPS细胞生成大量血小板，</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>4167891</samplingposition>
+      <onstart>false</onstart>
       <onmanual>false</onmanual>
       <sentencetext />
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4495755</samplingposition>
+      <samplingposition>4194792</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>然后以逐步增量的方式</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>4309893</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext />
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>4323123</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>分三次将生成的血小板注入到患者体内。
+</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>4488498</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4551561</samplingposition>
+      <samplingposition>4550679</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
+      <sentencetext>研究小组将在这一过程中确认这一方法的安全性和效果。</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4751775</samplingposition>
+      <samplingposition>4751334</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4823217</samplingposition>
+      <samplingposition>4813954</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
+      <sentencetext>研究小组表示，</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4865112</samplingposition>
+      <samplingposition>4864671</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4877901</samplingposition>
+      <samplingposition>4877460</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
+      <sentencetext>由于注入患者体内的血小板</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4980213</samplingposition>
+      <samplingposition>4979772</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>4997853</samplingposition>
+      <samplingposition>4997412</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
+      <sentencetext>源自其自身血液生成的iPS细胞，</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>5140737</samplingposition>
+      <samplingposition>5140296</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext />
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>5155731</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>因此估计几乎不会出现排异反应，</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>5304789</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>5156172</samplingposition>
+      <samplingposition>5334336</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
+      <sentencetext>这是一项发挥iPS细胞特长的临床研究。
+</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>5174253</samplingposition>
+      <samplingposition>5500593</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext />
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>5553954</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>　　政府有关部门将于近期开始对这一申请进行审议。</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>5732118</samplingposition>
+      <onstart>false</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext />
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>5755932</samplingposition>
+      <onstart>true</onstart>
+      <onmanual>false</onmanual>
+      <sentencetext>如果通过审查，</sentencetext>
+    </sentenceinfo>
+    <sentenceinfo>
+      <samplingposition>5814144</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>5193657</samplingposition>
+      <samplingposition>5828256</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
+      <sentencetext>研究小组打算在明年3月底之前</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>5264217</samplingposition>
+      <samplingposition>5953941</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
+      <sentencetext />
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>5272596</samplingposition>
+      <samplingposition>5975109</samplingposition>
       <onstart>true</onstart>
       <onmanual>false</onmanual>
+      <sentencetext>开始将生成的血小板注入患者体内。</sentencetext>
     </sentenceinfo>
     <sentenceinfo>
-      <samplingposition>5305230</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>5334777</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>5501034</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>5554836</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>5714919</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>5724621</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>5732559</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>5756373</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>5815026</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>5828697</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>5954382</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>5975550</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>6053166</samplingposition>
-      <onstart>false</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>6066396</samplingposition>
-      <onstart>true</onstart>
-      <onmanual>false</onmanual>
-    </sentenceinfo>
-    <sentenceinfo>
-      <samplingposition>6111819</samplingposition>
+      <samplingposition>6110937</samplingposition>
       <onstart>false</onstart>
       <onmanual>false</onmanual>
     </sentenceinfo>

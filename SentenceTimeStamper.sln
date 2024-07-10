@@ -1,17 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29519.87
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentenceTimeStamper", "SentenceTimeStamper\SentenceTimeStamper.csproj", "{4C38EE99-C9F7-4473-A72B-AC0F0E117A0D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveFormRendererLib2", "WaveFormRendererLib\WaveFormRendererLib2.csproj", "{3EFEF2D1-5D08-46FD-AF6D-098DBE7FB3B4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64292AE1-F835-483A-BCF7-4A251E915AF6} = {64292AE1-F835-483A-BCF7-4A251E915AF6}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWaveBlock", "TestWaveBlock\TestWaveBlock.csproj", "{1BF59FAA-7ED6-4078-825B-7FC99643D0E4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64292AE1-F835-483A-BCF7-4A251E915AF6} = {64292AE1-F835-483A-BCF7-4A251E915AF6}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{AA583659-4934-4AC2-968A-7EA50896E73D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSentence", "TestSentence\TestSentence.csproj", "{1F923A14-8C60-4B9D-B040-E399CD773F65}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64292AE1-F835-483A-BCF7-4A251E915AF6} = {64292AE1-F835-483A-BCF7-4A251E915AF6}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaveFormRendererLib", "WaveFormRendererLib\WaveFormRendererLib.csproj", "{64292AE1-F835-483A-BCF7-4A251E915AF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +32,6 @@ Global
 		{4C38EE99-C9F7-4473-A72B-AC0F0E117A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C38EE99-C9F7-4473-A72B-AC0F0E117A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C38EE99-C9F7-4473-A72B-AC0F0E117A0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3EFEF2D1-5D08-46FD-AF6D-098DBE7FB3B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3EFEF2D1-5D08-46FD-AF6D-098DBE7FB3B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3EFEF2D1-5D08-46FD-AF6D-098DBE7FB3B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3EFEF2D1-5D08-46FD-AF6D-098DBE7FB3B4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1BF59FAA-7ED6-4078-825B-7FC99643D0E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1BF59FAA-7ED6-4078-825B-7FC99643D0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BF59FAA-7ED6-4078-825B-7FC99643D0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,6 +40,10 @@ Global
 		{1F923A14-8C60-4B9D-B040-E399CD773F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F923A14-8C60-4B9D-B040-E399CD773F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F923A14-8C60-4B9D-B040-E399CD773F65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64292AE1-F835-483A-BCF7-4A251E915AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64292AE1-F835-483A-BCF7-4A251E915AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64292AE1-F835-483A-BCF7-4A251E915AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64292AE1-F835-483A-BCF7-4A251E915AF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

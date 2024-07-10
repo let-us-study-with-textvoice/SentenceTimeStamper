@@ -17,7 +17,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using WaveFormRendererLib2;
+using NAudio.WaveFormRenderer;
 
 
 namespace SentenceTimeStamper
@@ -285,8 +285,18 @@ namespace SentenceTimeStamper
             soundCloudDarkSticks.Width = (int)((panel1.Height - 2) * renderingScale); //生成する画像の幅
             soundCloudOrangeSticks.Width = (int)((panel1.Height - 2) * renderingScale); //生成する画像の幅
 
-            Image i1 = renderer.Render(voiceFilePath, averagePeakProvider, soundCloudDarkSticks);
-            Image i2 = renderer.Render(voiceFilePath, averagePeakProvider, soundCloudOrangeSticks);
+            Image i1 = null;
+            Image i2 = null;
+
+            using (var voiceStream = new AudioFileReader(voiceFilePath))
+            {
+                i1 = renderer.Render(voiceStream, averagePeakProvider, soundCloudDarkSticks);
+            }
+
+            using (var voiceStream = new AudioFileReader(voiceFilePath))
+            {
+                i2 = renderer.Render(voiceStream, averagePeakProvider, soundCloudOrangeSticks);
+            }
 
             i1.RotateFlip(RotateFlipType.Rotate90FlipX);
             i2.RotateFlip(RotateFlipType.Rotate90FlipX);
@@ -465,7 +475,7 @@ namespace SentenceTimeStamper
         // このソフトウエアについて
         private void aboutAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sentence Time Stamper 0.05\n" +
+            MessageBox.Show("Sentence Time Stamper Ver. 0.07\n" +
                 "\n" +
                 "Special Thanks\n" +
                 "NAudio and NAudio_WaveFormRendererLib\n" +
@@ -478,7 +488,7 @@ namespace SentenceTimeStamper
                 "https://github.com/lets-study-with-textvoice" +
                 "\n" +
                 "\n" +
-                "2020/May/12 guijiu",
+                "12.May.2020 guijiu",
                 "About this application");
         }
 
@@ -521,9 +531,9 @@ namespace SentenceTimeStamper
         {
             panel2.Size = new Size(45, pictureBox1.Height);
 
-            foreach (SentenceInfo x in listArrow)
+            foreach (SentenceInfoWithPicBox x in listArrow)
             {
-                SentenceInfo arrow;
+                SentenceInfoWithPicBox arrow;
                 arrow = x;
                 arrow.Location = new Point(0, (int)(panel2.Height * x.SamplingPosition * audioFile.WaveFormat.BlockAlign / audioFile.Length) - ArrowCenterY);
             }
@@ -586,7 +596,7 @@ namespace SentenceTimeStamper
         }
 
 
-        public List<SentenceInfo> listArrow = new List<SentenceInfo>();
+        public List<SentenceInfoWithPicBox> listArrow = new List<SentenceInfoWithPicBox>();
 
         // FindSentenceボタンの処理
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -603,13 +613,25 @@ namespace SentenceTimeStamper
 
             if (audioFile != null)
             {
-                waveFormArrangement.ArrangeWF(voiceFilePath);
+                using (var wavestream = new AudioFileReader(voiceFilePath))
+                {
+                    waveFormArrangement.ArrangeWF(wavestream);
+                }
+                
 
                 timeRise = int.Parse(rizeTimeTextBox.Text);
                 timeFall = int.Parse(fallTimeTextBox.Text);
 
-                //listArrow = waveFormArrangement.FindSectence((float)trackBar1.Value / (trackBar1.Maximum - trackBar1.Minimum) / magnification, timeRise, timeFall);
-                listArrow.AddRange(waveFormArrangement.FindSectence((float)trackBar1.Value / (trackBar1.Maximum - trackBar1.Minimum) / magnification, timeRise, timeFall));
+
+                // 音声波形からセンテンスを区切ったリストを生成し、（　waveFormArrangement.FindSectence()　）
+                // SentenceInfoのリストからSentenceInfoWithPicBoxのリストlistArrowに追加
+                foreach ( SentenceInfo sentInfo in waveFormArrangement.FindSectence((float)trackBar1.Value / (trackBar1.Maximum - trackBar1.Minimum) / magnification, timeRise, timeFall))
+                {
+                    // SentenceInfoWithPicBoxのリストをlistArrowに加える
+                    listArrow.Add(new SentenceInfoWithPicBox(sentInfo));
+                }
+
+                //listArrow.AddRange(waveFormArrangement.FindSectence((float)trackBar1.Value / (trackBar1.Maximum - trackBar1.Minimum) / magnification, timeRise, timeFall));
 
                 MakeArrow();    // 矢印を作って、panel2に登録する
                 CalculateArrowPosition();
@@ -622,9 +644,9 @@ namespace SentenceTimeStamper
         // 矢印を作って、panel2に登録する
         private void MakeArrow()
         {
-            foreach (SentenceInfo x in listArrow)
+            foreach (SentenceInfoWithPicBox x in listArrow)
             {
-                SentenceInfo arrow;
+                SentenceInfoWithPicBox arrow;
                 arrow = x;
                 ToArrowGiveEventHandler(arrow);
 
@@ -633,7 +655,7 @@ namespace SentenceTimeStamper
         }
 
         // 矢印にイベントハンドラを与える
-        private void ToArrowGiveEventHandler(SentenceInfo arrow)
+        private void ToArrowGiveEventHandler(SentenceInfoWithPicBox arrow)
         {
             arrow.DoubleClick += arrow_DoubleClick;     // 重なったarrowの順番を変える
             arrow.MouseEnter += arrow_MouseEnter;       // 矢印が示す指示値を表示する
@@ -651,16 +673,16 @@ namespace SentenceTimeStamper
         private void arrow_DoubleClick(object sender, EventArgs e)
         {
             this.ActiveControl = null;
-            panel2.Controls.Remove((SentenceInfo)sender);
-            panel2.Controls.Add((SentenceInfo)sender);
+            panel2.Controls.Remove((SentenceInfoWithPicBox)sender);
+            panel2.Controls.Add((SentenceInfoWithPicBox)sender);
         }
 
 
         // マウスポインタが矢印の上に入った時に、その矢印が前面になるようにするイベントハンドラ
         private void arrow_MouseEnter(object sender, EventArgs e)
         {
-            panel2.Controls.SetChildIndex((SentenceInfo)sender, 0);    // マウスが矢印の中に入ったら、その矢印を最前面に移動する。
-            //Console.WriteLine("listArrow.IndexOf((SentenceInfo)sender)={0}", listArrow.IndexOf((SentenceInfo)sender));
+            panel2.Controls.SetChildIndex((SentenceInfoWithPicBox)sender, 0);    // マウスが矢印の中に入ったら、その矢印を最前面に移動する。
+            //Console.WriteLine("listArrow.IndexOf((SentenceInfoWithPicBox)sender)={0}", listArrow.IndexOf((SentenceInfoWithPicBox)sender));
         }
 
 
@@ -687,9 +709,9 @@ namespace SentenceTimeStamper
             {
                 Point p = new Point();
                 p.Y = e.Y;
-                p = ((SentenceInfo)sender).PointToScreen(p);
+                p = ((SentenceInfoWithPicBox)sender).PointToScreen(p);
                 p = panel2.PointToClient(p);
-                slipOffset = p.Y - (((SentenceInfo)sender).Location).Y;// ドラッグしたときに矢印がスリップすることを補正ためのオフセット、arrow_MouseMove()で補正
+                slipOffset = p.Y - (((SentenceInfoWithPicBox)sender).Location).Y;// ドラッグしたときに矢印がスリップすることを補正ためのオフセット、arrow_MouseMove()で補正
                 isDragPictureBox = true;
             }
         }
@@ -707,28 +729,28 @@ namespace SentenceTimeStamper
                     p.Y = e.Y - slipOffset;     // slipOffsetはドラッグしたときに矢印がスリップすることを補正
                     p.X = 0;                    // 矢印の位置を矢印配置パネル(panel2)のtopに固定する。
 
-                    p = ((SentenceInfo)sender).PointToScreen(p);
+                    p = ((SentenceInfoWithPicBox)sender).PointToScreen(p);
                     p = panel2.PointToClient(p);
 
                     // ひとつ上の矢印を飛び越さないようにする
-                    if (listArrow.IndexOf((SentenceInfo)sender) < listArrow.Count - 1
-                        && p.Y >= listArrow[listArrow.IndexOf((SentenceInfo)sender) + 1].Location.Y)
+                    if (listArrow.IndexOf((SentenceInfoWithPicBox)sender) < listArrow.Count - 1
+                        && p.Y >= listArrow[listArrow.IndexOf((SentenceInfoWithPicBox)sender) + 1].Location.Y)
                     {
-                        p.Y = listArrow[listArrow.IndexOf((SentenceInfo)sender) + 1].Location.Y - 3;
+                        p.Y = listArrow[listArrow.IndexOf((SentenceInfoWithPicBox)sender) + 1].Location.Y - 3;
                     }
 
                     // 一つ下の矢印を飛び越さないようにする
-                    if (listArrow.IndexOf((SentenceInfo)sender) > 0
-                        && p.Y <= listArrow[listArrow.IndexOf((SentenceInfo)sender) - 1].Location.Y)
+                    if (listArrow.IndexOf((SentenceInfoWithPicBox)sender) > 0
+                        && p.Y <= listArrow[listArrow.IndexOf((SentenceInfoWithPicBox)sender) - 1].Location.Y)
                     {
-                        p.Y = listArrow[listArrow.IndexOf((SentenceInfo)sender) - 1].Location.Y + 3;
+                        p.Y = listArrow[listArrow.IndexOf((SentenceInfoWithPicBox)sender) - 1].Location.Y + 3;
                     }
 
                     // 矢印の先端がpanel2の外に出ないようにする。
                     if (p.Y < 0 - ArrowCenterY) p.Y = 0 - ArrowCenterY;
                     if (p.Y > panel2.Height - ArrowCenterY) p.Y = panel2.Height - ArrowCenterY - 3;
 
-                    ((SentenceInfo)sender).Location = p;
+                    ((SentenceInfoWithPicBox)sender).Location = p;
                 }
             }
         }
@@ -741,9 +763,9 @@ namespace SentenceTimeStamper
             {
                 isDragPictureBox = false;
 
-                long y = LocationToSamplingPosition(((SentenceInfo)sender).Location);
+                long y = LocationToSamplingPosition(((SentenceInfoWithPicBox)sender).Location);
 
-                ((SentenceInfo)sender).SamplingPosition = y;
+                ((SentenceInfoWithPicBox)sender).SamplingPosition = y;
 
                 showPlaySentenceTime(); // 再生するセンテンスの開始・終了時刻の表示
             }
@@ -971,8 +993,8 @@ namespace SentenceTimeStamper
         {
             if (audioFile == null) return;
 
-            SentenceInfo arrow1 = new SentenceInfo(0, false, true);     // Arrow
-            SentenceInfo arrow2 = new SentenceInfo(0, false, true);     // arrow
+            SentenceInfoWithPicBox arrow1 = new SentenceInfoWithPicBox(0, false, true);     // Arrow
+            SentenceInfoWithPicBox arrow2 = new SentenceInfoWithPicBox(0, false, true);     // arrow
             ToArrowGiveEventHandler(arrow1);
             ToArrowGiveEventHandler(arrow2);
 
@@ -999,7 +1021,7 @@ namespace SentenceTimeStamper
                     listArrow.Insert(i, arrow1);
                     listArrow.Insert(i + 1, arrow2);
 
-                    //foreach (SentenceInfo x in listArrow)
+                    //foreach (SentenceInfoWithPicBox x in listArrow)
                     //{
                     //    Console.WriteLine("x.SamplingPosition={0}", x.SamplingPosition);
                     //}
@@ -1038,7 +1060,7 @@ namespace SentenceTimeStamper
         // Arrowの上でコンテキストメニューの「削除」を選択した時のイベントハンドラ
         private void tsmiDeleteOnArrow_Click(object sender, EventArgs e)
         {
-            SentenceInfo deletingArrow = contextMenuStripOnArrow.SourceControl as SentenceInfo;// コンテキストメニューを開いて削除を選択した矢印をdeletingArrowに代入する。as Arrowにより、deletingArrowはArrow型以外の時nullになる
+            SentenceInfoWithPicBox deletingArrow = contextMenuStripOnArrow.SourceControl as SentenceInfoWithPicBox;// コンテキストメニューを開いて削除を選択した矢印をdeletingArrowに代入する。as Arrowにより、deletingArrowはArrow型以外の時nullになる
 
             if (deletingArrow != null)      // deletingArrowはSentenceInfo型以外の時nullになる
             {
@@ -1331,7 +1353,7 @@ namespace SentenceTimeStamper
 
                 foreach (DummySentenceInfo dummySentenceInfoRead in dummySentenceInfoListRead.DummySentenceInfo)
                 {
-                    SentenceInfo sentenceInfoRead = new SentenceInfo();
+                    SentenceInfoWithPicBox sentenceInfoRead = new SentenceInfoWithPicBox();
                     sentenceInfoRead.SamplingPosition = dummySentenceInfoRead.SamplingPosition;
                     sentenceInfoRead.OnStart = dummySentenceInfoRead.OnStart;
                     sentenceInfoRead.OnManual = dummySentenceInfoRead.OnManual;

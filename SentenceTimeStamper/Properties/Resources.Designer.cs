@@ -153,6 +153,16 @@ namespace SentenceTimeStamper.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap PauseTag {
+            get {
+                object obj = ResourceManager.GetObject("PauseTag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap play {
             get {
                 object obj = ResourceManager.GetObject("play", resourceCulture);
@@ -196,6 +206,16 @@ namespace SentenceTimeStamper.Properties {
         internal static System.Drawing.Bitmap reduction16_16 {
             get {
                 object obj = ResourceManager.GetObject("reduction16_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap StartTag {
+            get {
+                object obj = ResourceManager.GetObject("StartTag", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

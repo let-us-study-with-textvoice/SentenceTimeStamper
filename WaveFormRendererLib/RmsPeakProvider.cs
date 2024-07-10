@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WaveFormRendererLib2
+namespace NAudio.WaveFormRenderer
 {
     public class RmsPeakProvider : PeakProvider
     {

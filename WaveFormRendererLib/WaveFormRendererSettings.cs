@@ -1,7 +1,7 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace WaveFormRendererLib2
+namespace NAudio.WaveFormRenderer
 {
     public class WaveFormRendererSettings
     {

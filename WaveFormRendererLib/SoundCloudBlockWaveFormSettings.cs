@@ -1,6 +1,6 @@
 using System.Drawing;
 
-namespace WaveFormRendererLib2
+namespace NAudio.WaveFormRenderer
 {
     public class SoundCloudBlockWaveFormSettings : WaveFormRendererSettings
     {
