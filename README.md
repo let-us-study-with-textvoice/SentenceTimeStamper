@@ -1,4 +1,4 @@
-# SentenceTimeStamper Version 2.0
+# SentenceTimeStamper Version 0.07
 
 
 ## アプリの説明
@@ -33,5 +33,5 @@ stsファイルを再生アプリ：[TextVoicePlaye](https://github.com/let-us-s
 
 
 ## 使用した技術
-このアプリは、NAudioとNAudio.WaveFormRendererライブラリを使っています。
+このアプリは、[NAudio](https://github.com/naudio/NAudio)と[NAudio.WaveFormRenderer](https://github.com/naudio/NAudio.WaveFormRenderer)ライブラリを使っています。
 またNAudio.WaveFormRendererに、音声ファイルのセンテンスを検出するために、２つのクラス(WaveFormArrangement.csとSentenceInfo.cs）追加を追加しています。

@@ -475,7 +475,7 @@ namespace SentenceTimeStamper
         // このソフトウエアについて
         private void aboutAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sentence Time Stamper 0.06\n" +
+            MessageBox.Show("Sentence Time Stamper Ver. 0.07\n" +
                 "\n" +
                 "Special Thanks\n" +
                 "NAudio and NAudio_WaveFormRendererLib\n" +
@@ -488,7 +488,7 @@ namespace SentenceTimeStamper
                 "https://github.com/lets-study-with-textvoice" +
                 "\n" +
                 "\n" +
-                "2020/May/12 guijiu",
+                "12.May.2020 guijiu",
                 "About this application");
         }
 
