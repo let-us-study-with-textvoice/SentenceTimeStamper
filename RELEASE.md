@@ -1,13 +1,13 @@
-# SentenceTimeStamper ƒŠƒŠ[ƒXƒm[ƒg
+# SentenceTimeStamper ãƒªãƒªãƒ¼ã‚¹ãƒãƒ¼ãƒˆ
 
-### 0.07@(10.July.2024)
-* NAudioƒ‰ƒCƒuƒ‰ƒŠ‚ğver2.2.1‚ÉA‚»‚µ‚ÄNAudio.WaveFormRenderer‚ğver2.0‚É•ÏX‚µ‚½B
-* NAudio.WaveFormRenderer‚ªver2.0‚É•ÏX‚³‚ê‚½‚±‚Æ‚É‚æ‚èA.Net4Œn‚ÌƒTƒ|[ƒg‚ª‚È‚­‚È‚èA
-* .NetStandard2.0‚É‘Î‰‚Æ‚È‚Á‚½‚±‚Æ‚É”º‚¢A
-* NAudio.WaveFormRenderer‚É’Ç‰Á‚µ‚Ä‚¢‚½SentenceInfoƒNƒ‰ƒX‚Æ
-* WaveFormArrangementƒNƒ‰ƒX‚É‘å‚«‚­•ÏX‚ğ‰Á‚¦‚½B
-* SentenceInfoƒNƒ‰ƒX‚ÍŒ³XPictureBoxƒNƒ‰ƒX‚ğŒhÌ‚µ‚Ä‚¢‚½‚ªŒp³‚ğ‚â‚ßA
-* SentenceTimeStamper‹óŠÔ‚ÅPictureBoxWithPicBoxƒNƒ‰ƒX‚É‚»‚Ì‹@”\‚ÆŠÖ˜A‹@”\‚ğˆÚ‚µ‚½B
+### 0.07ã€€(10.July.2024)
+* NAudioãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’ver2.2.1ã«ã€ãã—ã¦NAudio.WaveFormRendererã‚’ver2.0ã«å¤‰æ›´ã—ãŸã€‚
+* NAudio.WaveFormRendererãŒver2.0ã«å¤‰æ›´ã•ã‚ŒãŸã“ã¨ã«ã‚ˆã‚Šã€.Net4ç³»ã®ã‚µãƒãƒ¼ãƒˆãŒãªããªã‚Šã€
+* .NetStandard2.0ã«å¯¾å¿œã¨ãªã£ãŸã“ã¨ã«ä¼´ã„ã€
+* NAudio.WaveFormRendererã«è¿½åŠ ã—ã¦ã„ãŸSentenceInfoã‚¯ãƒ©ã‚¹ã¨
+* WaveFormArrangementã‚¯ãƒ©ã‚¹ã«å¤§ããå¤‰æ›´ã‚’åŠ ãˆãŸã€‚
+* SentenceInfoã‚¯ãƒ©ã‚¹ã¯å…ƒã€…PictureBoxã‚¯ãƒ©ã‚¹ã‚’æ•¬ç§°ã—ã¦ã„ãŸãŒç¶™æ‰¿ã‚’ã‚„ã‚ã€
+* SentenceTimeStamperç©ºé–“ã§PictureBoxWithPicBoxã‚¯ãƒ©ã‚¹ã«ãã®æ©Ÿèƒ½ã¨é–¢é€£æ©Ÿèƒ½ã‚’ç§»ã—ãŸã€‚
 
 ### 0.01 (12.May.2020)
-‰ƒŠƒŠ[ƒX
+åˆãƒªãƒªãƒ¼ã‚¹
